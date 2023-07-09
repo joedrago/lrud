@@ -41,6 +41,7 @@ const highlightCoords = () => {
         c.distSq = ((srcX - c.x) * (srcX - c.x)) + ((srcY - c.y) * (srcY - c.y))
         c.angle = Math.atan2(c.y - srcY, c.x - srcX) * 180 / Math.PI
 
+        c.element.innerHTML = `${directionFromAngle(c.angle)}`
         // c.element.innerHTML = `${directionFromAngle(c.angle)} ${c.angle.toFixed(2)}` // Debug Text
 
         if(selected.id != c.id) {
